@@ -2,4 +2,8 @@
 <resources>
     <dimen name="buttonSize">82.5dp</dimen>
     <dimen name="textSize">45sp</dimen>
+
+    <dimen name="landButtonSize">59dp</dimen>
+    <dimen name="landButtonWidth">135dp</dimen>
+    <dimen name="landTextSize">25sp</dimen>
 </resources>
