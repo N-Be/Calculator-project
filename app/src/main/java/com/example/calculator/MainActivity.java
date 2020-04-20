@@ -175,12 +175,7 @@ public class MainActivity extends AppCompatActivity {
         divide = this.findViewById(R.id.divide);
         divide.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {if(toDo.equals("divide")){
-                textView.setText(Double.toString(last/Double.parseDouble(textView.getText().toString())));
-                if(textView.getText().toString().endsWith(".0")){
-                    textView.setText(textView.getText().subSequence(0,textView.getText().length()-2));
-                }
-            }
+            public void onClick(View v) {
                 last = Double.parseDouble(textView.getText().toString());
                 action = true;
                 toDo = "divide";
@@ -190,12 +185,6 @@ public class MainActivity extends AppCompatActivity {
         multiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(toDo.equals("multiply")){
-                    textView.setText(Double.toString(Double.parseDouble(textView.getText().toString())*last));
-                    if(textView.getText().toString().endsWith(".0")){
-                        textView.setText(textView.getText().subSequence(0,textView.getText().length()-2));
-                    }
-                }
                 last = Double.parseDouble(textView.getText().toString());
                 action = true;
                 toDo = "multiply";
@@ -206,12 +195,6 @@ public class MainActivity extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(toDo.equals("subtract")){
-                    textView.setText(Double.toString(last-Double.parseDouble(textView.getText().toString())));
-                    if(textView.getText().toString().endsWith(".0")){
-                        textView.setText(textView.getText().subSequence(0,textView.getText().length()-2));
-                    }
-                }
                 last = Double.parseDouble(textView.getText().toString());
                 action = true;
                 toDo = "subtract";
@@ -222,13 +205,6 @@ public class MainActivity extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(toDo.equals("add") ){
-                    textView.setText(Double.toString(Double.parseDouble(textView.getText().toString())+last));
-                    if(textView.getText().toString().endsWith(".0")){
-                        textView.setText(textView.getText().subSequence(0,textView.getText().length()-2));
-                    }
-                }
-
                 last = Double.parseDouble(textView.getText().toString());
                 action = true;
                 toDo = "add";
